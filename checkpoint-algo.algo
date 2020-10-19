@@ -1,0 +1,19 @@
+ALGORITHM test-sentence
+VAR
+c:char:='';
+nb_word, nb_vow, nb_char: integer :=0;
+BEGIN
+WHILE (c=<>'.') do
+Read (c)
+nb_char := nb_char + 1;
+IF (c='a' OR c='e' OR c='y' OR c='o' OR c='i') THEN
+nb_vow := nb_vow + 1;
+END_IF
+IF (c='') then 
+nb_word := nb_word + 1;
+END_IF
+END_WHILE
+Whrite("the lenght of the sentence is   ", nb_char);
+Whrite("the number of words in the sentence is ", nb_word);
+Whrite("the numberof vowels in the sentence is ", nb_vow);
+END 
